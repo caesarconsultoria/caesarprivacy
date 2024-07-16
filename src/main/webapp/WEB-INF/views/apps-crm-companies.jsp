@@ -1957,11 +1957,11 @@
                                                                 <input class="form-check-input" type="checkbox" id="checkAll" value="option">
                                                             </div>
                                                         </th>
-                                                        <th class="sort" data-sort="name" scope="col">Company Name</th>
-                                                        <th class="sort" data-sort="owner" scope="col">Owner</th>
-                                                        <th class="sort" data-sort="industry_type" scope="col">Industry Type</th>
-                                                        <th class="sort" data-sort="star_value" scope="col">Rating</th>
-                                                        <th class="sort" data-sort="location" scope="col">Location</th>
+                                                        <th class="sort" data-sort="name" scope="col">Nome Operador</th>
+                                                        <th class="sort" data-sort="owner" scope="col">CNPJ</th>
+                                                        <th class="sort" data-sort="industry_type" scope="col">Contato</th>
+                                                        <th class="sort" data-sort="star_value" scope="col">Telefone</th>
+                                                        <th class="sort" data-sort="location" scope="col">Objetivo</th>
                                                         <th scope="col">Action</th>
                                                     </tr>
                                                 </thead>
@@ -2258,11 +2258,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Velzon.
+                            <script>document.write(new Date().getFullYear())</script> CÆSAR Consultoria.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Themesbrand
+                                Design & Develop by CÆSAR Consultoria
                             </div>
                         </div>
                     </div>
