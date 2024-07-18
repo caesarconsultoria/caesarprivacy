@@ -1,4 +1,4 @@
-package com.caesar.caesarprivacy.config;
+package com.caesar.integratedgovernance.config;
 
 import java.text.ParseException;
 
@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-import com.caesar.caesarprivacy.services.DBService;
+import com.caesar.integratedgovernance.services.DBService;
 
 @Configuration
 @Profile("dev")

@@ -1,4 +1,4 @@
-package com.caesar.caesarprivacy.controller;
+package com.caesar.integratedgovernance.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

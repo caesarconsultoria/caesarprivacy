@@ -11,8 +11,8 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	
-	<groupId>com.caesarprivacy</groupId>
-	<artifactId>caesarprivacy</artifactId>
+	<groupId>com.integratedgovernance</groupId>
+	<artifactId>integratedgovernance</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>CaesarPrivacy</name>
 	<description>Demo project for Spring Boot</description>

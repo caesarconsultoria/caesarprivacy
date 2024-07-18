@@ -1,13 +1,13 @@
-package com.caesar.caesarprivacy;
+package com.caesar.integratedgovernance;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CaesarprivacyApplication {
+public class IntegratedgovernanceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CaesarprivacyApplication.class, args);
+		SpringApplication.run(IntegratedgovernanceApplication.class, args);
 	}
 
 }
