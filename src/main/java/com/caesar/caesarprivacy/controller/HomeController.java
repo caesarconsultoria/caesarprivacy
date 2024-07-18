@@ -11,9 +11,9 @@ public class HomeController {
 	     return "index"; // Retorna o nome do template JSP ou Thymeleaf sem o sufixo
 	 }
 	 
-	 @GetMapping("/companies")
-	    public String contacts() {
-	    return "apps-crm-companies"; // O prefixo e sufixo serão adicionados automaticamente
+	 @GetMapping("/operadores")
+	    public String operadores() {
+	    return "operadores"; // O prefixo e sufixo serão adicionados automaticamente
 	 }
 	
 }

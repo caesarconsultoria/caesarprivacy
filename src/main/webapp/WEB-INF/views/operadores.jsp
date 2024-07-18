@@ -2,31 +2,9 @@
 <!-- <html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable" data-theme="default" data-theme-colors="default"> -->
 <html lang="en" data-layout="horizontal" data-layout-style="" data-layout-position="fixed" data-topbar="light">
 
-<head>
-
-    <meta charset="utf-8">
-    <title>Companies | Velzon - Admin & Dashboard Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
-    <meta content="Themesbrand" name="author">
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
-
-    <!-- Sweet Alert css-->
-    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Layout config Js -->
-    <script src="assets/js/layout.js"></script>
-    <!-- Bootstrap Css -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <!-- Icons Css -->
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
-    <!-- App Css-->
-    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css">
-    <!-- custom Css-->
-    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css">
-
-</head>
+<!--Inclusão de cabeçalho-->
+    <jsp:include page="header.jsp" />
+<!--Fim da inclusão-->
 
 <body>
 
@@ -1182,21 +1160,21 @@
 
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="#sidebarLayouts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
-                                <i class="ri-layout-3-line"></i> <span data-key="t-layouts">Layouts</span> <span class="badge badge-pill bg-danger" data-key="t-hot">Hot</span>
+                                <i class="ri-layout-3-line"></i> <span data-key="t-layouts">Gestão Estratégica</span> <span class="badge badge-pill bg-danger" data-key="t-hot">Hot</span>
                             </a>
                             <div class="collapse menu-dropdown" id="sidebarLayouts">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="layouts-horizontal.html" target="_blank" class="nav-link" data-key="t-horizontal">Horizontal</a>
+                                        <a href="layouts-horizontal.html" target="_blank" class="nav-link" data-key="t-horizontal">Cadeia de Valor</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="layouts-detached.html" target="_blank" class="nav-link" data-key="t-detached">Detached</a>
+                                        <a href="layouts-detached.html" target="_blank" class="nav-link" data-key="t-detached">Processos de Negócio</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="layouts-two-column.html" target="_blank" class="nav-link" data-key="t-two-column">Two Column</a>
+                                        <a href="layouts-two-column.html" target="_blank" class="nav-link" data-key="t-two-column">Riscos</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="layouts-vertical-hovered.html" target="_blank" class="nav-link" data-key="t-hovered">Hovered</a>
+                                        <a href="layouts-vertical-hovered.html" target="_blank" class="nav-link" data-key="t-hovered">Planejamento de Continuidade de Negócio</a>
                                     </li>
                                 </ul>
                             </div>
@@ -1206,12 +1184,12 @@
 
                         <li class="nav-item">
                             <a class="nav-link menu-link" href="#sidebarAuth" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">
-                                <i class="ri-account-circle-line"></i> <span data-key="t-authentication">Authentication</span>
+                                <i class="ri-account-circle-line"></i> <span data-key="t-authentication">Gerenciamento de Dados</span>
                             </a>
                             <div class="collapse menu-dropdown" id="sidebarAuth">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="#sidebarSignIn" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarSignIn" data-key="t-signin"> Sign In
+                                        <a href="#sidebarSignIn" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarSignIn" data-key="t-signin"> Mapeamento de Dados
                                         </a>
                                         <div class="collapse menu-dropdown" id="sidebarSignIn">
                                             <ul class="nav nav-sm flex-column">
@@ -1883,14 +1861,18 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-galaxy-transparent">
-                                <h4 class="mb-sm-0">Companies</h4>
+                                <h4 class="mb-sm-0">Operador</h4>
+
+                                <!--Inicio Migulha de pão-->
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">CRM</a></li>
-                                        <li class="breadcrumb-item active">Companies</li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Gerenciamento de Dados</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Cadastros</a></li>
+                                        <li class="breadcrumb-item active">Operador</li>
                                     </ol>
                                 </div>
+                                <!--Fim Migulha de pão-->
 
                             </div>
                         </div>
@@ -1903,7 +1885,7 @@
                                 <div class="card-header">
                                     <div class="d-flex align-items-center flex-wrap gap-2">
                                         <div class="flex-grow-1">
-                                            <button class="btn btn-info add-btn" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-add-fill me-1 align-bottom"></i> Add Company</button>
+                                            <button class="btn btn-info add-btn" data-bs-toggle="modal" data-bs-target="#showModal" id="btnNovoOperador"  ><i class="ri-add-fill me-1 align-bottom"></i> Adicionar Operador</button>
                                         </div>
                                         <div class="flex-shrink-0">
                                             <div class="hstack text-nowrap gap-2">
@@ -1988,23 +1970,28 @@
                                                         <td class="location">Los Angeles, USA</td>
                                                         <td>
                                                             <ul class="list-inline hstack gap-2 mb-0">
-                                                                <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Call">
+                                                               
+                                                                <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Ligar">
                                                                     <a href="javascript:void(0);" class="text-muted d-inline-block">
                                                                         <i class="ri-phone-line fs-16"></i>
                                                                     </a>
                                                                 </li>
-                                                                <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Message">
+                                                               
+                                                                <li class="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Menssagem">
                                                                     <a href="javascript:void(0);" class="text-muted d-inline-block">
                                                                         <i class="ri-question-answer-line fs-16"></i>
                                                                     </a>
                                                                 </li>
-                                                                <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
+                                                               
+                                                                <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Visualizar">
                                                                     <a href="javascript:void(0);" class="view-item-btn"><i class="ri-eye-fill align-bottom text-muted"></i></a>
                                                                 </li>
-                                                                <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Edit">
+                                                               
+                                                                <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Editar">
                                                                     <a class="edit-item-btn" href="#showModal" data-bs-toggle="modal"><i class="ri-pencil-fill align-bottom text-muted"></i></a>
                                                                 </li>
-                                                                <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Delete">
+                                                               
+                                                                <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Excluir">
                                                                     <a class="remove-item-btn" data-bs-toggle="modal" href="#deleteRecordModal">
                                                                         <i class="ri-delete-bin-fill align-bottom text-muted"></i>
                                                                     </a>
@@ -2026,22 +2013,30 @@
                                         <div class="d-flex justify-content-end mt-3">
                                             <div class="pagination-wrap hstack gap-2">
                                                 <a class="page-item pagination-prev disabled" href="#">
-                                                    Previous
+                                                    Anterior
                                                 </a>
                                                 <ul class="pagination listjs-pagination mb-0"></ul>
                                                 <a class="page-item pagination-next" href="#">
-                                                    Next
+                                                    Próximo
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" id="modalHeader">
                                         <div class="modal-dialog modal-dialog-centered modal-lg">
                                             <div class="modal-content border-0">
-                                                <div class="modal-header bg-info-subtle p-3">
-                                                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                               <!--Inicio da Título da tela de cadastro do Operador -->
+                                               <div class="modal-header bg-info-subtle p-3"> 
+                                                   <div>
+                                                        <h5 class="modal-title" id="exampleModalLabel">Adicionar Operadores</h5>
+                                                        <h6 class="modal-subtitle text-muted">Art 5º, VII - pessoa natural ou jurídica, de direito público ou privado, que realiza o tratamento de dados pessoais em nome do controlador.</h6>
+                                                    </div>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
                                                 </div>
+
+                                                <!--Fim da título da tela de cadastro do Operador-->
+                                               
+                                               <!--Inicio do corpo da tela de cadastro do Operador-->
                                                 <form class="tablelist-form" autocomplete="off">
                                                     <div class="modal-body">
                                                         <input type="hidden" id="id-field">
@@ -2050,7 +2045,7 @@
                                                                 <div class="text-center">
                                                                     <div class="position-relative d-inline-block">
                                                                         <div class="position-absolute bottom-0 end-0">
-                                                                            <label for="company-logo-input" class="mb-0" data-bs-toggle="tooltip" data-bs-placement="right" title="Select Image">
+                                                                            <label for="company-logo-input" class="mb-0" data-bs-toggle="tooltip" data-bs-placement="right" title="Selecione Imagem">
                                                                                 <div class="avatar-xs cursor-pointer">
                                                                                     <div class="avatar-title bg-light border rounded-circle text-muted">
                                                                                         <i class="ri-image-fill"></i>
@@ -2065,24 +2060,50 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <h5 class="fs-13 mt-3">Company Logo</h5>
+                                                                    <h5 class="fs-13 mt-3">Logo Operador</h5>
                                                                 </div>
+                                                            </div>
+                                                            
+                                                            <div class="col-lg-8">
+                                                                <label for="companyname-field" class="form-label">Razão Social</label>
+                                                                <input type="text" id="companyname-field" class="form-control" placeholder="Entre com a Razão Social do Operador" required="">
+                                                            </div>
+                                                            
+                                                            <div class="col-lg-4">
                                                                 <div>
-                                                                    <label for="companyname-field" class="form-label">Name</label>
-                                                                    <input type="text" id="companyname-field" class="form-control" placeholder="Enter company name" required="">
+                                                                    <label for="owner-field" class="form-label">CNPJ</label>
+                                                                    <input type="text" id="owner-field" class="form-control" placeholder="Informe o CNPJ" required="">
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-6">
                                                                 <div>
-                                                                    <label for="owner-field" class="form-label">Owner Name</label>
-                                                                    <input type="text" id="owner-field" class="form-control" placeholder="Enter owner name" required="">
+                                                                    <label for="location-field" class="form-label">Endereço</label>
+                                                                    <input type="text" id="location-field" class="form-control" placeholder="Informe endereço" required="">
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-6">
                                                                 <div>
-                                                                    <label for="industry_type-field" class="form-label">Industry Type</label>
+                                                                    <label for="employee-field" class="form-label">Responsável</label>
+                                                                    <input type="text" id="employee-field" class="form-control" placeholder="Informe o nome do responsável" required="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div>
+                                                                    <label for="website-field" class="form-label">Telefone</label>
+                                                                    <input type="text" id="website-field" class="form-control" placeholder="Informe telefone" required="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div>
+                                                                    <label for="contact_email-field" class="form-label">E-mail</label>
+                                                                    <input type="text" id="contact_email-field" class="form-control" placeholder="Informe e-mail de contato" required="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div>
+                                                                    <label for="industry_type-field" class="form-label">Finalidade da Contratação</label>
                                                                     <select class="form-select" id="industry_type-field">
-                                                                        <option value="">Select industry type</option>
+                                                                        <option value="">Selecione Finalidade da Contratação</option>
                                                                         <option value="Computer Industry">Computer Industry</option>
                                                                         <option value="Chemical Industries">Chemical Industries</option>
                                                                         <option value="Health Services">Health Services</option>
@@ -2091,52 +2112,23 @@
                                                                     </select>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-lg-4">
-                                                                <div>
-                                                                    <label for="star_value-field" class="form-label">Rating</label>
-                                                                    <input type="text" id="star_value-field" class="form-control" placeholder="Enter rating" required="">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-4">
-                                                                <div>
-                                                                    <label for="location-field" class="form-label">Location</label>
-                                                                    <input type="text" id="location-field" class="form-control" placeholder="Enter location" required="">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-4">
-                                                                <div>
-                                                                    <label for="employee-field" class="form-label">Employee</label>
-                                                                    <input type="text" id="employee-field" class="form-control" placeholder="Enter employee" required="">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6">
-                                                                <div>
-                                                                    <label for="website-field" class="form-label">Website</label>
-                                                                    <input type="text" id="website-field" class="form-control" placeholder="Enter website" required="">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6">
-                                                                <div>
-                                                                    <label for="contact_email-field" class="form-label">Contact Email</label>
-                                                                    <input type="text" id="contact_email-field" class="form-control" placeholder="Enter contact email" required="">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-12">
-                                                                <div>
-                                                                    <label for="since-field" class="form-label">Since</label>
-                                                                    <input type="text" id="since-field" class="form-control" placeholder="Enter since" required="">
-                                                                </div>
-                                                            </div>
                                                         </div>
                                                     </div>
+                                                
+                                                    <!--Inicio do rodapé da tela de cadastro do operador-->
                                                     <div class="modal-footer">
                                                         <div class="hstack gap-2 justify-content-end">
-                                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                                            <button type="submit" class="btn btn-success" id="add-btn">Add Company</button>
+                                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Fechar</button>
+                                                            <button type="submit" class="btn btn-success" id="add-btn">Adicionar Operador</button>
                                                             <!-- <button type="button" class="btn btn-success" id="edit-btn">Update</button> -->
                                                         </div>
                                                     </div>
+                                                    <!--Fim do rodaé da tela de cadastro do operador-->
+                                                
                                                 </form>
+
+                                                <!--Fim do corpo da tela de cadastro do operador-->
+
                                             </div>
                                         </div>
                                     </div>
@@ -2254,20 +2246,9 @@
             </div>
             <!-- End Page-content -->
 
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> CÆSAR Consultoria.
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by CÆSAR Consultoria
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <!--### Página de rodapé incluída-->
+            <jsp:include page="footer.jsp" />
+            
         </div>
         <!-- end main content-->
 
@@ -3249,7 +3230,7 @@
     <!-- Sweet Alerts js -->
     <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
 
-    <script src="assets/js/pages/crm-companies.init.js"></script>
+    <script src="assets/js/pages/operadores.js"></script>
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
