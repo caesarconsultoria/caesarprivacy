@@ -32,16 +32,25 @@ public class DBService {
 		DataGovernanceRoles dgr2 = new DataGovernanceRoles(null, "Operador");
 		DataGovernanceRoles dgr3 = new DataGovernanceRoles(null, "Encarregado");
 		
+		
 		dataGovernanceRolesRepository.saveAll(Arrays.asList(dgr1, dgr2, dgr3));
+				
+		PersonalData pd1 = new PersonalData(null, "Paulo Duarte", "","Rua joaquim nabuco, 5152","8199998888","duarte@gmail.com" );
+		PersonalData pd2 = new PersonalData(null, "Maria da Silva", "","Rua 28 de agosto, 321","8199998888","mariasilva@hotmail.com" );
+		PersonalData pd3 = new PersonalData(null, "Joaquim Phenix", "","Avenida Visconde Suassuna, 251","8199998888","joaquim@gmail.com" );
+		PersonalData pd4 = new PersonalData(null, "Joana Dark", "999.999.999-99","Rua 16 de julho, 100","8199998888","joana@gmail.com" );
 		
-		PersonalData pd1 = new PersonalData(null, "José Paulo", "999.999.999-99","Rua joaquim nabuco, 5152","8199998888","email@gmail.com" );
-		
-		personalDataRepository.save(pd1);
+		//personalDataRepository.save(pd1);
+		personalDataRepository.saveAll(Arrays.asList(pd1, pd2, pd3, pd4));
 		
 				
-		DataGovernanceEntities dger = new DataGovernanceEntities(null, dgr2, pd1, "Serviços de Banco de Dados", "999.999.999/9999-99");
+		DataGovernanceEntities dger1 = new DataGovernanceEntities(null, dgr1, pd1, "Seguros LTDA", "999.999.999/9999-99");
+		DataGovernanceEntities dger2 = new DataGovernanceEntities(null, dgr2, pd2, "Serviços de Banco de Dados", "999.999.999/9999-99");
+		DataGovernanceEntities dger3 = new DataGovernanceEntities(null, dgr2, pd3, "Contabilidade e RH", "999.999.999/9999-99");
+		DataGovernanceEntities dger4 = new DataGovernanceEntities(null, dgr3, pd4, "", "");
 		
-		dataGovernanceEntitiesRepository.save(dger); 	
+		//dataGovernanceEntitiesRepository.save(dger); 	
+		dataGovernanceEntitiesRepository.saveAll(Arrays.asList(dger1,dger2,dger3,dger4));
 	
 		
 	}
