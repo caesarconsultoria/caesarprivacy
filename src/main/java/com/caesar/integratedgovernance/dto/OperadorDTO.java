@@ -4,21 +4,20 @@ import java.io.Serializable;
 
 public class OperadorDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
-
-	private Integer id;
-	private Integer idPersonalData;
-
+	
 	//Dados do Papel
 	private Integer idGovernanceRoles;
 	private String nomepapel;
 	
 	//Dados da Entidade
+	private Integer id;
 	private String razaosocial;
 	private String cnpj;
 	private String nomeresponsavel;
 	
 	
 	//Dados pessoais
+	private Integer idPersonalData;
 	private String cpf;
 	private String email;
 	private String endereco;

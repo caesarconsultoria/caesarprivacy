@@ -1939,15 +1939,15 @@
                                                                 <input class="form-check-input" type="checkbox" id="checkAll" value="option">
                                                             </div>
                                                         </th>
-                                                        <th class="sort" data-sort="name" scope="col">Nome Operador</th>
-                                                        <th class="sort" data-sort="owner" scope="col">CNPJ</th>
-                                                        <th class="sort" data-sort="industry_type" scope="col">Contato</th>
-                                                        <th class="sort" data-sort="star_value" scope="col">Telefone</th>
-                                                        <th class="sort" data-sort="location" scope="col">Objetivo</th>
+                                                        <th class="sort" data-sort="razaosocial" scope="col">Razão Social</th>
+                                                        <th class="sort" data-sort="cnpj" scope="col">CNPJ</th>
+                                                        <th class="sort" data-sort="nomeresponsavel" scope="col">Responsável</th>
+                                                        <th class="sort" data-sort="telefone" scope="col">Telefone</th>
+                                                        <th class="sort" data-sort="email" scope="col">Email</th>
                                                         <th scope="col">Action</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody class="list form-check-all">
+                                                <tbody class="list form-check-all" id="listaDataGovernanceEntities">
                                                     <tr>
                                                         <th scope="row">
                                                             <div class="form-check">
