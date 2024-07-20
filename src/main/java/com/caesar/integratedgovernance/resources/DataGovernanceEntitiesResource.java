@@ -17,6 +17,7 @@ import com.caesar.integratedgovernance.domain.enums.DataGovernanceRolesEnums;
 import com.caesar.integratedgovernance.dto.OperadorDTO;
 import com.caesar.integratedgovernance.services.DataGovernanceEntitiesService;
 
+
 @RestController
 @RequestMapping(value="/toListDataGovernanceEntities")
 public class DataGovernanceEntitiesResource {
@@ -75,6 +76,28 @@ public class DataGovernanceEntitiesResource {
 	}
 	
 	
+	
+	@GetMapping("/operadores/{id}")
+	//public ResponseEntity<List<OperadorDTO>> filtrarOperadores(List<DataGovernanceEntities> entidades) {
+
+	public ResponseEntity<OperadorDTO> findOperadorPorId(@PathVariable Integer id){
+	
+		List<DataGovernanceEntities> listEntidades = service.findAll();
+	
+		 OperadorDTO dto = new OperadorDTO();
+
+	    for (DataGovernanceEntities entidade : listEntidades) {
+
+	    	if ( this.isOperadorRole( entidade ) && entidade.getId() == id) {
+	    		dto = this.convertDataGovernanceEntitiesToOperadorDTO( entidade );	
+	        }
+	    }
+	    return ResponseEntity.ok().body(dto);
+	}
+	
+	
+	
+	
 	/**
 	 * Método auxiliar para filtrar verificar se a Entidade é do tipo Operador
 	 * @param entities
@@ -83,7 +106,7 @@ public class DataGovernanceEntitiesResource {
 	private boolean isOperadorRole(DataGovernanceEntities entities) {
 	    DataGovernanceRoles role = entities.getDatagovernanceroles();
 	    //valida se o papel (role) não está nulo e se é um Operador.
-	    //sendo, retornar verdadeiro, caso contrário falso.
+	    //sendo, retorna verdadeiro, caso contrário falso.
 	    return role != null && role.getId() == DataGovernanceRolesEnums.OPERADOR.getId();
 	}
 	
@@ -123,6 +146,12 @@ public class DataGovernanceEntitiesResource {
         return dto;
     }
 	//########################################################################################################
+	
+	
+	
+	
+	
+	
 	
 	
 }

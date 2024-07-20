@@ -2195,41 +2195,36 @@
                                     </ul>
                                 </div>
                                 <div class="card-body">
-                                    <h6 class="text-muted text-uppercase fw-semibold mb-3">Information</h6>
+                                    <h6 class="text-muted text-uppercase fw-semibold mb-3">Finalidade da Contratação</h6>
                                     <p class="text-muted mb-4">A company incurs fixed and variable costs such as the purchase of raw materials, salaries and overhead, as explained by AccountingTools, Inc. Business owners have the discretion to determine the actions.</p>
                                     <div class="table-responsive table-card">
                                         <table class="table table-borderless mb-0">
-                                            <tbody>
+                                            <tbody id="detalheOperador">
                                                 <tr>
-                                                    <td class="fw-medium" scope="row">Industry Type</td>
-                                                    <td>Chemical Industries</td>
+                                                    <td class="fw-medium" scope="row">Razão Social</td>
+                                                    <td id="razaosocialdetalhe">...</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="fw-medium" scope="row">Location</td>
-                                                    <td>Damascus, Syria</td>
+                                                    <td class="fw-medium" scope="row">CNPJ</td>
+                                                    <td>...</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="fw-medium" scope="row">Employee</td>
-                                                    <td>10-50</td>
+                                                    <td class="fw-medium" scope="row">Responsável</td>
+                                                    <td>...</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="fw-medium" scope="row">Rating</td>
-                                                    <td>4.0 <i class="ri-star-fill text-warning align-bottom"></i></td>
+                                                    <td class="fw-medium" scope="row">Endereço</td>
+                                                    <td>...</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="fw-medium" scope="row">Website</td>
-                                                    <td>
-                                                        <a href="javascript:void(0);" class="link-primary text-decoration-underline">www.syntycesolution.com</a>
-                                                    </td>
+                                                    <td class="fw-medium" scope="row">Telefone</td>
+                                                    <td>... <i class="ri-star-fill text-warning align-bottom"></i></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="fw-medium" scope="row">Contact Email</td>
-                                                    <td>info@syntycesolution.com</td>
+                                                    <td class="fw-medium" scope="row">Email</td>
+                                                    <td>...</td>
                                                 </tr>
-                                                <tr>
-                                                    <td class="fw-medium" scope="row">Since</td>
-                                                    <td>1995</td>
-                                                </tr>
+                                                
                                             </tbody>
                                         </table>
                                     </div>
