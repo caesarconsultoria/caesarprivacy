@@ -44,9 +44,9 @@ public class DBService {
 		personalDataRepository.saveAll(Arrays.asList(pd1, pd2, pd3, pd4));
 		
 				
-		DataGovernanceEntities dger1 = new DataGovernanceEntities(null, dgr1, pd1, "Seguros LTDA", "999.999.999/9999-99");
+		DataGovernanceEntities dger1 = new DataGovernanceEntities(null, dgr1, pd1, "Seguros LTDA", "111.222.333/0001-64");
 		DataGovernanceEntities dger2 = new DataGovernanceEntities(null, dgr2, pd2, "Serviços de Banco de Dados", "999.999.999/9999-99");
-		DataGovernanceEntities dger3 = new DataGovernanceEntities(null, dgr2, pd3, "Contabilidade e RH", "999.999.999/9999-99");
+		DataGovernanceEntities dger3 = new DataGovernanceEntities(null, dgr2, pd3, "Contabilidade e RH", "321.123.456/0001-20");
 		DataGovernanceEntities dger4 = new DataGovernanceEntities(null, dgr3, pd4, "", "");
 		
 		//dataGovernanceEntitiesRepository.save(dger); 	
