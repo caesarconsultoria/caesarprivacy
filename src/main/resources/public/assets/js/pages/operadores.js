@@ -21,7 +21,11 @@ btnNovoOperador.onclick = function() {
 }
 
 
-// Função para abrir o modal
+/**
+ * Função para abrir o modal
+ * @author Julio Cesar
+ * 26/07/2024
+ */
 function abrirModalEditar() {
    var modal = new bootstrap.Modal( document.getElementById("modalEditar") );
     modal.show();
@@ -36,7 +40,7 @@ function fecharModalEditar() {
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    fetch('http://localhost:8080/toListDataGovernanceEntities/operadores')
+    fetch('http://localhost:8080/operadores/lista')
         .then(response => response.json())
         .then(data => {
             let tableBody = document.getElementById("listaDataGovernanceEntities");
@@ -100,6 +104,8 @@ function visualizarItemClick(anchor) {
     
     // Obtém o valor do atributo "operador-id" da linha
     const operadorId = row ? row.getAttribute('operador-id') : 'Operador ID não encontrado';
+
+
  
     // Exibe o Operador ID em um alerta e preenche o formulário
     if (operadorId) {
@@ -143,8 +149,8 @@ function editarItemClick(anchor) {
 function consultarOperadorPorId(operadorId, acao) {
 
         // Construir a URL do serviço com o operadorId
-        const url = `http://localhost:8080/toListDataGovernanceEntities/operadores/${operadorId}`;
-        
+        const url = `http://localhost:8080/operadores/${operadorId}`;
+
         // Fazer a solicitação HTTP
         fetch(url)
         .then(response => response.json())
