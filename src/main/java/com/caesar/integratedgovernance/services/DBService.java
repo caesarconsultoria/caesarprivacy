@@ -13,6 +13,8 @@ import com.caesar.integratedgovernance.repositories.DataGovernanceEntitiesReposi
 import com.caesar.integratedgovernance.repositories.DataGovernanceRolesRepository;
 import com.caesar.integratedgovernance.repositories.PersonalDataRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class DBService {
 
@@ -25,7 +27,7 @@ public class DBService {
 	@Autowired
 	private PersonalDataRepository personalDataRepository;
 	
-	
+	 @Transactional
 	public void instantiateTestDataBase() throws ParseException{
 	
 		DataGovernanceRoles dgr1 = new DataGovernanceRoles(null, "Controlador");
@@ -49,8 +51,9 @@ public class DBService {
 		DataGovernanceEntities dger3 = new DataGovernanceEntities(null, dgr2, pd3, "Contabilidade e RH", "321.123.456/0001-20");
 		DataGovernanceEntities dger4 = new DataGovernanceEntities(null, dgr3, pd4, "", "");
 		
-		//dataGovernanceEntitiesRepository.save(dger); 	
-		dataGovernanceEntitiesRepository.saveAll(Arrays.asList(dger1,dger2,dger3,dger4));
+		//dataGovernanceEntitiesRepository.save(dger); 
+		
+		dataGovernanceEntitiesRepository.saveAll( Arrays.asList(dger1,dger2,dger3,dger4) );
 	
 		
 	}

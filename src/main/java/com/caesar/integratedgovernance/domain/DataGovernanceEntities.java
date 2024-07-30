@@ -3,6 +3,7 @@ package com.caesar.integratedgovernance.domain;
 import java.io.Serializable;
 import java.util.Objects;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,7 +23,7 @@ public class DataGovernanceEntities implements Serializable{
 	@JoinColumn(name="ID_DATAGOVERNANCEROLES")
 	private DataGovernanceRoles datagovernanceroles;
 	
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="ID_PERSONALDATA")
 	private PersonalData personalData;
 	

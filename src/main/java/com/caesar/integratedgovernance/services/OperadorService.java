@@ -1,14 +1,17 @@
 package com.caesar.integratedgovernance.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import com.caesar.integratedgovernance.domain.DataGovernanceEntities;
 import com.caesar.integratedgovernance.domain.DataGovernanceRoles;
 import com.caesar.integratedgovernance.domain.PersonalData;
+import com.caesar.integratedgovernance.domain.enums.DataGovernanceRolesEnums;
 import com.caesar.integratedgovernance.dto.OperadorDTO;
 import com.caesar.integratedgovernance.repositories.DataGovernanceEntitiesRepository;
 import com.caesar.integratedgovernance.repositories.PersonalDataRepository;
+import com.caesar.integratedgovernance.services.exceptions.DataIntegrityException;
 
 import jakarta.transaction.Transactional;
 
@@ -44,23 +47,29 @@ public class OperadorService {
 	public DataGovernanceEntities fromDTO(OperadorDTO operadorDto) {
 		
 		//Dados do papel
-		DataGovernanceRoles dgr = new DataGovernanceRoles();
-		dgr.setId( 2 ); //Operador
+		DataGovernanceRoles papelObj = new DataGovernanceRoles();
+		
+		papelObj.setId( DataGovernanceRolesEnums.OPERADOR.getId() ); 
 		
 		//Dados pessois
-		PersonalData pd = new PersonalData( null, 
-				operadorDto.getNomeresponsavel(), 
-				"", 
-				operadorDto.getEndereco(), 
-				operadorDto.getTelefone(),
-				operadorDto.getEmail() );
+		PersonalData dadosPessoaisOperador = new PersonalData( null, operadorDto.getNomeresponsavel(), "",	operadorDto.getEndereco(), operadorDto.getTelefone(), operadorDto.getEmail() );
 		
 		//Entidade de Governança Operador
-		DataGovernanceEntities  dge = new DataGovernanceEntities( null, dgr,pd, operadorDto.getRazaosocial(), operadorDto.getCnpj() );
+		DataGovernanceEntities  dge = new DataGovernanceEntities( null, papelObj, dadosPessoaisOperador, operadorDto.getRazaosocial(), operadorDto.getCnpj() );
 		
 		return dge;
 	}
 	
-	
+	/**
+	 * Método utilizado para excluir um Operador 
+	 * @param id
+	 */
+	public void deleteById(Integer id) {
+		try {
+			dataGovernanceEntitiesRepository.deleteById( id );
+		}catch(DataIntegrityViolationException e) { 
+			throw new DataIntegrityException("Não é possível excluir uma Cliente porque há Pedidos relacionadas.");
+		}
+	}
 	
 }

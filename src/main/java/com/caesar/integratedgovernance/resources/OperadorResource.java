@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,18 +36,6 @@ public class OperadorResource {
 	
 	
 	/**
-	 * Lista todas as Entidades de Governança de Dados (DataGovernanceEntities) cadastradas
-	 * sem distinção entre seus papeis (Roles).
-	 * @return
-	 */
-	@GetMapping("/datagovernanceentities")
-	public ResponseEntity<List<DataGovernanceEntities>> findAll(){
-		List<DataGovernanceEntities> list = service.findAll();
-		return ResponseEntity.ok().body(list);
-	}
-	
-	
-	/**
 	 * Método utilizado para inserir um novo Operador na base
 	 * @param operadorDto
 	 * @return
@@ -61,6 +50,22 @@ public class OperadorResource {
 		
 		return ResponseEntity.created(uri).build();
 	}
+	
+	
+	/**
+	 * Método utilizado para excluir um Operador a pratir do seu Id
+	 * @param id
+	 * @return
+	 */
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Void> deleteById(@PathVariable Integer id) {
+
+		operadorService.deleteById( id );
+		
+		return ResponseEntity.noContent().build();
+	}
+	
+	
 	
 	/**
 	 * Método utilizado para consultar um Operador por seu Id
@@ -83,12 +88,11 @@ public class OperadorResource {
 	    return ResponseEntity.ok().body(dto);
 	}
 	
-	//#################### Código para Recuperação de Operadores ###########################################
 	
-		/**
-		 * Lista todas as Entidades que possuírem o Papel de "Operador"
-		 * @return
-		 */
+	/**
+	 * Lista todas as Entidades que possuírem o Papel de "Operador"
+	 * @return
+	 */
 	@GetMapping("lista")
 	public ResponseEntity<List<OperadorDTO>> filtrarOperadores(){
 	
@@ -96,7 +100,7 @@ public class OperadorResource {
 	
 		List<OperadorDTO> operadoresDTOList = new ArrayList<>();
 
-	    for (DataGovernanceEntities entidade : listEntidades) {
+	    for ( DataGovernanceEntities entidade : listEntidades ) {
 	        //verifica se a entidade é um Operador
 	    	if ( this.isOperadorRole( entidade ) ) {
 	            //sendo Operador, converte um DataGovernanceEntities para um OperadorDTO e o adiciona na lista de retorno.
@@ -122,8 +126,7 @@ public class OperadorResource {
 	    return role != null && role.getId() == DataGovernanceRolesEnums.OPERADOR.getId();
 	}
 	
-	
-		
+			
 	/**
 	 * Método auxiliar para converter DataGovernanceEntities em OperadorDTO
 	 * @param dataGovernanceEntities
@@ -157,12 +160,6 @@ public class OperadorResource {
 
         return dto;
     }
-	//########################################################################################################
-	
-	
-	
-	
-	
 	
 	
 	

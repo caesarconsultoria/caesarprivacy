@@ -1436,7 +1436,7 @@
                                                <div class="modal-header bg-info-subtle p-3"> 
                                                    <div>
                                                         <h5 class="modal-title" id="exampleModalLabel">Adicionar Operadores</h5>
-                                                        <h6 class="modal-subtitle text-muted">Art 5º, VII - pessoa natural ou jurídica, de direito público ou privado, que realiza o tratamento de dados pessoais em nome do controlador.</h6>
+                                                        <h6 class="modal-subtitle text-muted">Lei 13.709/2018, Art 5º, VII - pessoa natural ou jurídica, de direito público ou privado, que realiza o tratamento de dados pessoais em nome do controlador.</h6>
                                                     </div>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
                                                 </div>
@@ -1549,7 +1549,7 @@
                                                <div class="modal-header bg-info-subtle p-3"> 
                                                    <div>
                                                         <h5 class="modal-title" id="exampleModalLabel">Editar Operadores</h5>
-                                                        <h6 class="modal-subtitle text-muted">Art 5º, VII - pessoa natural ou jurídica, de direito público ou privado, que realiza o tratamento de dados pessoais em nome do controlador.</h6>
+                                                        <h6 class="modal-subtitle text-muted">Lei 13.709/2018, Art 5º, VII - pessoa natural ou jurídica, de direito público ou privado, que realiza o tratamento de dados pessoais em nome do controlador.</h6>
                                                     </div>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
                                                 </div>

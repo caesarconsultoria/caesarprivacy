@@ -23,11 +23,11 @@ public class DataGovernanceEntitiesService {
 		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! Id: " + id + ", Tipo: " + DataGovernanceEntities.class.getName()));
 	}
 
-
-
 	public List<DataGovernanceEntities> findAll(){
 		return repo.findAll();
 	}
+	
+		
 
 
 }
