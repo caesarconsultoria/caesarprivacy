@@ -1,5 +1,7 @@
 package com.caesar.integratedgovernance.services;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
@@ -12,6 +14,7 @@ import com.caesar.integratedgovernance.dto.OperadorDTO;
 import com.caesar.integratedgovernance.repositories.DataGovernanceEntitiesRepository;
 import com.caesar.integratedgovernance.repositories.PersonalDataRepository;
 import com.caesar.integratedgovernance.services.exceptions.DataIntegrityException;
+import com.caesar.integratedgovernance.services.exceptions.ObjectNotFoundException;
 
 import jakarta.transaction.Transactional;
 
@@ -38,6 +41,18 @@ public class OperadorService {
 		return obj;
 	}
 	
+	
+	/**
+	 * Método utilizado para atualizar uma Operador existente. 
+	 * @param obj
+	 * @return
+	 */
+	public DataGovernanceEntities update(OperadorDTO obj) {
+		DataGovernanceEntities dataGovernanceEntities = find( obj.getId() );
+		updateData(dataGovernanceEntities, obj);
+		//this.fromDTO( obj );
+		return dataGovernanceEntitiesRepository.save( obj );
+	}
 	
 	/**
 	 * Classe auxiliar para extrair os dados do DTO e popular os objetos
@@ -71,5 +86,27 @@ public class OperadorService {
 			throw new DataIntegrityException("Não é possível excluir uma Cliente porque há Pedidos relacionadas.");
 		}
 	}
+	
+	
+	/**
+	 * Método auxiliar para consultar um Operador por Id antes de persistir uma atualização do mesmo
+	 * @param id
+	 * @return
+	 */
+	public DataGovernanceEntities find(Integer id) {
+		
+		Optional<DataGovernanceEntities> obj = dataGovernanceEntitiesRepository.findById( id );
+				
+		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! Id: " + id + ", Tipo: " + DataGovernanceEntities.class.getName()));
+	
+	}
+	
+	
+	private void updateData(DataGovernanceEntities objOld, OperadorDTO newObj) {
+		objOld.setPersonalData(null);   .setNome( newObj.getNomeresponsavel());
+		objOld.setEmail ( newObj.getEmail());
+		
+	}
+	
 	
 }
